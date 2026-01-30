@@ -1,0 +1,5 @@
+include ':app'
+//include ':pay_plugins:library'
+include ':pay_plugin_uni'
+// include ':wx-transfer'  // 目录不存在，已注释
+include ':uni-wx-transfer'

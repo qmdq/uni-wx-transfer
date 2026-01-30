@@ -1,0 +1,14 @@
+{
+  "nativePlugins": [
+    {
+
+      "plugins": [
+        {
+          "type": "module",
+          "name": "wx_transfer_uni",
+          "class": "com.uniplugin.wx_transfer.WXTransferModule"
+        }
+      ]
+    }
+  ]
+}

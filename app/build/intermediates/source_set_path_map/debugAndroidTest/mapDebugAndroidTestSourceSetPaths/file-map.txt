@@ -1,0 +1,4 @@
+com.android.simple.test.app-androidTest-0 D:\work\code\Android-SDK@4.87.82540_20251128\HBuilder-Integrate-AS\app\build\generated\res\resValues\androidTest\debug
+com.android.simple.test.app-mergeDebugAndroidTestResources-1 D:\work\code\Android-SDK@4.87.82540_20251128\HBuilder-Integrate-AS\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+com.android.simple.test.app-mergeDebugAndroidTestResources-2 D:\work\code\Android-SDK@4.87.82540_20251128\HBuilder-Integrate-AS\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+com.android.simple.test.app-debugAndroidTest-3 D:\work\code\Android-SDK@4.87.82540_20251128\HBuilder-Integrate-AS\app\build\intermediates\merged_res\debugAndroidTest\mergeDebugAndroidTestResources

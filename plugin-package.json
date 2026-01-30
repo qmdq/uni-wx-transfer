@@ -1,0 +1,16 @@
+{
+  "name": "my-pay-plugin",
+  "id": "my-pay-plugin",
+  "version": "1.0.0",
+  "description": "支付插件",
+  "_plugin_type": "nativeplugin",
+  "android": {
+    "plugins": [
+      {
+        "type": "module-uni",
+        "name": "testPlugin",
+        "class": "com.pay_plugin_uni.library.TestPlugin"
+      }
+    ]
+  }
+}
