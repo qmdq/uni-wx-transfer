@@ -110,31 +110,53 @@ export default {
         })
         return
       }
-      
-      // 调用转账方法（具体参数根据插件实际接口调整）
-      this.wxTransfer.transfer({
-        // 转账参数
-        amount: 100,        // 金额（分）
-        desc: '转账描述',   // 转账说明
-        // ... 其他必要参数
-      }, (res) => {
-        // 回调处理
-        if (res.code === 0) {
-          uni.showToast({
-            title: '转账成功',
-            icon: 'success'
-          })
-        } else {
-          uni.showToast({
-            title: res.message || '转账失败',
-            icon: 'none'
-          })
+
+      // 调用微信商家转账接口
+      this.wxTransfer.requestMerchantTransfer(
+        'your_app_id',        // 微信 appId
+        'your_mch_id',        // 商户号
+        'your_package_info',  // package 信息（由后端生成）
+        'user_open_id',       // 用户 openId
+        (res) => {
+          // 回调处理
+          const data = typeof res === 'string' ? JSON.parse(res) : res
+
+          if (data.errCode === 0) {
+            uni.showToast({
+              title: '调起成功',
+              icon: 'success'
+            })
+          } else {
+            uni.showToast({
+              title: data.errMsg || '调用失败',
+              icon: 'none'
+            })
+          }
         }
-      })
+      )
     }
   }
 }
 </script>
+```
+
+#### 参数说明
+
+| 参数 | 类型 | 必填 | 说明 |
+|------|------|------|------|
+| appId | String | 是 | 微信 appId |
+| mchId | String | 是 | 微信支付商户号 |
+| packageInfo | String | 是 | 转账 package 信息（需后端接口生成） |
+| openId | String | 是 | 用户的微信 openId |
+| callback | Function | 是 | 回调函数 |
+
+#### 回调结果
+
+```javascript
+{
+  "errCode": 0,     // 0:成功, -1:上下文错误, -3:未安装微信, -4:微信版本过低, -5:发送失败, -99:其他错误
+  "errMsg": "ok"    // 结果描述
+}
 ```
 
 ## 注意事项
