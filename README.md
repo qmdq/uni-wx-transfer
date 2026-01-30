@@ -20,17 +20,29 @@
 </tr>
 </table>
 ### 1. 导入插件
-解压uni-plugin/wx_transfer_uni.zip
-将 `wx_transfer_uni` 文件夹放置到项目的 `nativeplugins` 目录下：
+
+**步骤一：解压插件包**
+
+找到项目中的 `uni-plugin/wx_transfer_uni.zip` 压缩包，将其解压。
+
+**步骤二：复制到项目目录**
+
+将解压后的 `wx_transfer_uni` 文件夹完整复制到你的 UniApp 项目的 `nativeplugins` 目录下：
 
 ```
-项目根目录/
+你的UniApp项目/
 ├── nativeplugins/
 │   └── wx_transfer_uni/
 │       ├── android/
 │       │   └── uni-wx-transfer-release.aar
 │       └── package.json
+├── pages/
+├── static/
+├── App.vue
+└── manifest.json
 ```
+
+> **提示**：如果你的项目中没有 `nativeplugins` 目录，请新建一个。
 
 ### 2. 配置 manifest.json
 
